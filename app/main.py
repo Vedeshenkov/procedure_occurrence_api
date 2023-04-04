@@ -7,13 +7,13 @@ from google.cloud import bigquery
 from pydantic import BaseModel
 
 
+#bigquery setup
 path = os.path.join(os.path.dirname(__file__),"virtual-bonito-382111-dbc51f57aeb1.json")
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]=path
-# a BigQuery client
 client = bigquery.Client()
 
 
-
+#FastApi setup
 tags_metadata = [
     {
         "name": "count",
